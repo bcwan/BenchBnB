@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
 const Greeting = (props) => {
+
   if(props.currentUser) {
     return (
       <div>
@@ -12,9 +14,10 @@ const Greeting = (props) => {
   } else {
     return (
       <div>
-        <p>
-          Not logged in!
-        </p>
+        <ul>
+          <li><Link to="/signup">Sign Up</Link></li>
+          <li><Link to="/login">Login</Link></li>
+        </ul>
       </div>
     )
   }
